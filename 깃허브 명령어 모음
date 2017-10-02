@@ -1,0 +1,24 @@
+깃허브 세팅법
+
+git init
+ 
+git remote add origin "github repository 주소".git //해당 깃과 연결 
+git remote -v // 현재 연결되어있는 깃 저장소 확인
+
+git remote set-url origin "github repository 주소".git //깃 저장소 주소 변경
+
+
+git add .
+ 
+git commit -m "<<first commit>>" // 커밋 업데이트, push 할 준비
+
+git push - u origin <<브랜치 이름>> //깃으로 만들어놓은 커밋 push
+
+
+git status // 현재 작업중인 브랜치 확인
+git branch <<branch_name>> // 브랜치 생성
+git checkout <<branch_name>> //브랜치 이동 
+git checkout -b <<branch_name>> //브랜치 생성 + 이동 명령
+
+
+ 
