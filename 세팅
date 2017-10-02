@@ -1,0 +1,60 @@
+0.apt-get의 repo 리스트를 최신자로 바꾼다.
+  $ sudo apt-get update
+1.기본적으로 django 1.11, python3.4을 이용한다.
+  (17.9.2 기준 django 1.11.4, python3.6.2)
+  - django 버전이 2.x버전은 개발중인 버전이고, 1.11버전이 1.x 버전 중 가장 안정적이고, 오래 지원될 버전이기 때문. (2020년까지)
+  - 파이썬은 해당 버전과 세트인 버전 중 최신버전으로 사용.
+
+  $ sudo apt-get install python3.6
+
+2.C9 개발환경에서는 virtualenv를 사용해서 1번의 버전들을 기본으로 만들어준다.
+  $ sudo apt-get install python3.6-venv
+  $ cd ~; python3.6 -m venv env
+  $ source ~/env/bin/activate
+  - 여기까지 잘 따라왔으면 터미널 이름 옆에 (env)가 붙는다.
+  $ pip install django
+
+  - 해제를 원할경우
+  $ deactivate
+
+3.로그인할때마다 기본으로 적용되게 설정
+  $ echo "source ~/env/bin/activate" >> ~/.bashrc
+
+4.확인
+  - 새 터미널을 만든다. 유저명 옆에 (env)가 붙어있는가?
+  $ python --version
+  >>> Python 3.6.2
+  $ django-admin --version
+  >>> 1.11.4
+  $ pip --version
+  pip 9.0.1 from /home/ubuntu/env/lib/python3.6/site-packages (python 3.6)
+
+5.이제 개발준비가 끝났다.
+  명령어 모음:
+
+  sudo apt-get update
+  sudo apt-get install python3.6
+  sudo apt-get install python3.6-venv
+  cd ~; python3.6 -m venv env
+  source ~/env/bin/activate
+  pip install django
+  echo "source ~/env/bin/activate" >> ~/.bashrc
+
+  #용량확보 및 파이썬 디버깅툴 추가를 위해
+  sudo apt-get autoremove
+  sudo apt-get install python3.6-dev;
+  sudo pip install ikpdb;
+
+6.편의를 위해 - bashrc에 명령어 추가하기
+  매번 코드를 실행할때마다 명령어를 입력하기는 귀찮다. 그래서 ~/.bash_aliases에 다음과 같은 명령어를 추가한다.
+
+  PROJECT_DIR=~/workspace
+  manage () { pushd $PROJECT_DIR; python manage.py $@; popd; }
+  alias migrate="manage migrate"
+  alias runserver="manage runserver $IP:$PORT"
+
+
+
+사족---------
+신정철: 이 개발환경을 만드느라 삭제되신 django-tutorial(5회), django_tutorial(2회) 고 Workspace에게 명복을 빕니다.
+
