@@ -25,7 +25,7 @@ SECRET_KEY = '_34j7(iy+t6&reqgzlg0cvl6=wfok$c(na5mgicx59(tu^*a9_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lol-api-test-synod.c9users.io']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 

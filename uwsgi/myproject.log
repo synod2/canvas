@@ -1,0 +1,82 @@
+*** Starting uWSGI 2.0.15 (64bit) on [Mon Oct  9 10:46:30 2017] ***
+compiled with version: 4.8.4 on 09 October 2017 10:20:59
+os: Linux-4.9.17-c9 #1 SMP Thu Mar 23 01:38:54 UTC 2017
+nodename: synod-lol-api-test-5460205
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /
+writing pidfile to /home/ubuntu/workspace/uwsgi/myproject.pid
+detected binary path: /home/ubuntu/env/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/workspace/
+your processes number limit is 1048576
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/workspace/uwsgi/myproject.sock fd 3
+Python version: 3.4.3 (default, Nov 17 2016, 01:12:14)  [GCC 4.8.4]
+PEP 405 virtualenv detected: /home/ubuntu/env
+Set PythonHome to /home/ubuntu/env
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x22907e0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218304 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+ImportError: No module named 'myproject'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6747)
+spawned uWSGI worker 1 (pid: 6751, cores: 1)
+spawned uWSGI worker 2 (pid: 6752, cores: 1)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 6751)...
+Gracefully killing worker 2 (pid: 6752)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (/home/ubuntu/workspace/uwsgi/myproject.sock)
+running /home/ubuntu/env/bin/uwsgi
+[uWSGI] getting INI configuration from /home/ubuntu//workspace/uwsgi/uwsgi.ini
+*** Starting uWSGI 2.0.15 (64bit) on [Mon Oct  9 10:52:28 2017] ***
+compiled with version: 4.8.4 on 09 October 2017 10:20:59
+os: Linux-4.9.17-c9 #1 SMP Thu Mar 23 01:38:54 UTC 2017
+nodename: synod-lol-api-test-5460205
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /
+detected binary path: /home/ubuntu/env/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/workspace/
+your processes number limit is 1048576
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ubuntu/workspace/uwsgi/myproject.sock fd 3
+Python version: 3.4.3 (default, Nov 17 2016, 01:12:14)  [GCC 4.8.4]
+PEP 405 virtualenv detected: /home/ubuntu/env
+Set PythonHome to /home/ubuntu/env
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x21e1760
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 218304 bytes (213 KB) for 2 cores
+*** Operational MODE: preforking ***
+ImportError: No module named 'myproject'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 6747)
+spawned uWSGI worker 1 (pid: 6972, cores: 1)
+spawned uWSGI worker 2 (pid: 6973, cores: 1)
